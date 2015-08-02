@@ -196,7 +196,7 @@ class VRAE:
 
     def save_parameters(self, path):
         """Saves all the parameters in a way they can be retrieved later"""
-        pickle.dump({name: p.get_value() for name, p in self.params.items()], open(path + "/params.pkl", "wb"))
+        pickle.dump({name: p.get_value() for name, p in self.params.items()}, open(path + "/params.pkl", "wb"))
         pickle.dump({name: m.get_value() for name, m in self.m.items()}, open(path + "/m.pkl", "wb"))
         pickle.dump({name: v.get_value() for name, v in self.v.items()}, open(path + "/v.pkl", "wb"))
 
