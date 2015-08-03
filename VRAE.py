@@ -207,7 +207,7 @@ class VRAE:
         v_list = pickle.load(open(path + "/v.pkl", "rb"))
 
         for name in p_list.keys():
-            self.p[name].set_value(p_list[name].astype(theano.config.floatX))
+            self.params[name].set_value(p_list[name].astype(theano.config.floatX))
             self.m[name].set_value(m_list[name].astype(theano.config.floatX))
             self.v[name].set_value(v_list[name].astype(theano.config.floatX))
 
