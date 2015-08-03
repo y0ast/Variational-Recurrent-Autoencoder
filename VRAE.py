@@ -203,8 +203,8 @@ class VRAE:
     def load_parameters(self, path):
         """Load the variables in a shared variable safe way"""
         p_list = pickle.load(open(path + "/params.pkl", "rb"))
-        m_list = cPickle.load(open(path + "/m.pkl", "rb"))
-        v_list = cPickle.load(open(path + "/v.pkl", "rb"))
+        m_list = pickle.load(open(path + "/m.pkl", "rb"))
+        v_list = pickle.load(open(path + "/v.pkl", "rb"))
 
         for name in p_list.keys():
             self.p[name].set_value(p_list[name].astype(theano.config.floatX))
