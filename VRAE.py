@@ -70,7 +70,7 @@ class VRAE:
 
         h0_enc = T.matrix("h0_enc")
         result, _ = theano.scan(encodingstep, 
-                sequences = reverse_x, 
+                sequences = x, 
                 outputs_info = h0_enc)
 
         h_encoder = result[-1]
